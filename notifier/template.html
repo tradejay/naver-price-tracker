@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>네이버 최저가 트래커 경보 리포트</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #0f172a; color: #f8fafc; padding: 24px; margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 1px solid #334155; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+        .title { font-size: 20px; font-weight: 700; color: #38bdf8; margin: 0 0 10px 0; }
+        .meta { color: #94a3b8; font-size: 13px; }
+        .table-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; overflow: hidden; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+        th { background: #0f172a; color: #94a3b8; padding: 12px 16px; border-bottom: 1px solid #334155; font-weight: 600; }
+        td { padding: 12px 16px; border-bottom: 1px solid #1e293b; color: #e2e8f0; }
+        .alert-price { color: #f43f5e; font-weight: 700; }
+        .msrp-price { color: #94a3b8; text-decoration: line-through; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; background: rgba(244, 63, 94, 0.2); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.4); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">🚨 [노출가 경보] 로지텍 비디오 협업 솔루션 MSRP 미만 적발</h1>
+            <div class="meta">기준 시각: {{ timestamp }} | 총 적발 건수: {{ total_alerts }}건</div>
+        </div>
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>카테고리</th>
+                        <th>상품명</th>
+                        <th>판매처</th>
+                        <th>노출 가격</th>
+                        <th>기준 MSRP</th>
+                        <th>상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ table_rows }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

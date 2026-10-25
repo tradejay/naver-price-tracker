@@ -1,0 +1,11 @@
+{
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "sender_email": "your_alert_sender@gmail.com",
+  "sender_password": "your_app_password_here",
+  "receivers": [
+    "b2b_sales_lead@company.co.kr",
+    "partner_management@company.co.kr"
+  ],
+  "schedule_cron": "0 13 * * 1-5"
+}
